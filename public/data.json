@@ -9,7 +9,7 @@
     "age": 3,
     "location": "Bogura",
     "description": "Healthy deshi cow suitable for Qurbani. Well fed with natural food.",
-    "image": "https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=800",
+    "image":"/got-1.png",
     "category": "Large Animal"
   },
   {
@@ -152,7 +152,7 @@
     "age": 5,
     "location": "Gazipur",
     "description": "Large premium dairy cow with excellent body condition.",
-    "image": "https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800",
+    "image": "https://images.unsplash.com/photo-1597616456860-df68738ec8e4?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Large Animal"
   }
 ]
