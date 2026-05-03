@@ -1,9 +1,11 @@
 import { Card, Chip } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaWeight } from "react-icons/fa";
 
 const AnimalCard = ({ photo }) => {
   return (
+     <Link href={`/all-animals/${photo.id}`}>
     <Card className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
       
       <div className="relative w-full h-56 bg-gray-100">
@@ -31,6 +33,7 @@ const AnimalCard = ({ photo }) => {
         </div>
       </div>
     </Card>
+    </Link>
   );
 };
 

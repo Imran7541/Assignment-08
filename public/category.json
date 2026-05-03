@@ -2,73 +2,73 @@
   {
     "id": 1,
     "name": "Large Animal",
-    "description": "Big size animals like cows suitable for Qurbani",
-    "image": "https://images.unsplash.com/photo-1605146769289-440113cc3d00?w=800"
+    "description": "Big size animals like cows suitable for Qurbani"
+    
   },
   {
     "id": 2,
     "name": "Small Animal",
-    "description": "Goats and small animals for Qurbani",
-    "image": "https://images.unsplash.com/photo-1595433562696-4d0d74d4d55c?w=800"
+    "description": "Goats and small animals for Qurbani"
+    
   },
   {
     "id": 3,
     "name": "Premium Cow",
-    "description": "High quality and expensive cows",
-    "image": "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800"
+    "description": "High quality and expensive cows"
+    
   },
   {
     "id": 4,
     "name": "Budget Friendly",
-    "description": "Affordable animals within budget",
-    "image": "https://images.unsplash.com/photo-1612197527213-5c2f6d2f89c2?w=800"
+    "description": "Affordable animals within budget"
+    
   },
   {
     "id": 5,
     "name": "Imported Breed",
-    "description": "Foreign breed animals like Boer or Friesian",
-    "image": "https://images.unsplash.com/photo-1601758003122-53c40e686a19?w=800"
+    "description": "Foreign breed animals like Boer or Friesian"
+    
   },
   {
     "id": 6,
-    "name": "Local Breed",
-    "description": "Deshi cows and goats from local farms",
-    "image": "https://images.unsplash.com/photo-1546445317-29f4545e9d53?w=800"
+    "name": "Large Animal",
+    "description": "Deshi cows and goats from local farms"
   },
+    
   {
     "id": 7,
     "name": "Heavy Weight",
-    "description": "Animals with high weight for large Qurbani",
-    "image": "https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800"
+    "description": "Animals with high weight for large Qurbani"
+    
   },
   {
     "id": 8,
     "name": "Medium Weight",
-    "description": "Balanced weight animals for families",
-    "image": "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?w=800"
+    "description": "Balanced weight animals for families"
+    
   },
   {
     "id": 9,
-    "name": "Healthy & Organic",
-    "description": "Naturally fed animals with organic care",
-    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800"
+    "name": "Large Animal",
+    "description": "Naturally fed animals with organic care"
+    
   },
   {
     "id": 10,
     "name": "Top Breeds",
-    "description": "Popular breeds like Sahiwal, Black Bengal",
-    "image": "https://images.unsplash.com/photo-1559070081-90a87c2c9d1d?w=800"
+    "description": "Popular breeds like Sahiwal, Black Bengal"
+    
   },
   {
     "id": 11,
     "name": "Farm Raised",
-    "description": "Animals raised in professional farms",
-    "image": "https://images.unsplash.com/photo-1440428099904-c6d459a7e7b5?w=800"
+    "description": "Animals raised in professional farms"
+    
   },
   {
     "id": 12,
     "name": "Quick Sale",
-    "description": "Animals available for quick booking",
-    "image": "https://images.unsplash.com/photo-1598514982846-0d2c5c3b64a2?w=800"
+    "description": "Animals available for quick booking"
+    
   }
 ]
