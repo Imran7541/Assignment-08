@@ -4,12 +4,10 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
+        hostname:'i.pinimg.com'
       },
     ],
   },
 };
-// vai ekhane config a kaj korte hobe
 
 export default nextConfig;
