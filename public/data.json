@@ -22,7 +22,7 @@
     "age": 4,
     "location": "Rajshahi",
     "description": "Strong and healthy Dromedary Camel, perfect for Qurbani.",
-    "image": "/three.png",
+    "image": "/four.png",
     "category": "Large Animal"
   },
   {
@@ -113,7 +113,7 @@
     "age": 3,
     "location": "Jessore",
     "description": "Imported Bactrian camel with heavy weight and excellent health.",
-    "image": "/four.png",
+    "image": "/three.png",
     "category": "Small Animal"
   },
   {
