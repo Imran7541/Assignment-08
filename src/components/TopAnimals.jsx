@@ -8,7 +8,7 @@ const TopAnimals =async () => {
    console.log(topAnimals);
     return (
         <div>
-            <h1 className="text-2xl font-bold mt-5">Top Cow</h1>
+            <h1 className="text-2xl font-bold mt-5"></h1>
             <div>
                 {topAnimals.map(photo=><AnimalCard key={photo.id} photo={photo}/>)}
             </div>
