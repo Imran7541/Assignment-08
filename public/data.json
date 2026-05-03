@@ -61,7 +61,7 @@
     "age": 5,
     "location": "Dhaka",
     "description": "High weight Friesian cross cow, excellent for Qurbani.",
-    "image": "/public/eight.png",
+    "image": "/eight.png",
     "category": "Large Animal"
   },
   {
@@ -131,7 +131,7 @@
   },
   {
     "id": 11,
-    "name": "Mountain Goat",
+    "name": "Mounten Goat",
     "type": "Goat",
     "breed": "Hill Goat",
     "price": 30000,
@@ -139,7 +139,7 @@
     "age": 2,
     "location": "Rangamati",
     "description": "Strong mountain goat, active and suitable for Qurbani.",
-    "image": "/maunten.png",
+    "image": "/mounten.png",
     "category": "Small Animal"
   },
   {
