@@ -8,7 +8,7 @@ const Navbar = () => {
   const user = userData.data?.user;
 
   const handleLogOut= async()=>{
-  await authClient.logOut
+  await authClient.signOut()
   }
 
   return (
