@@ -9,13 +9,18 @@ const Banner = () => {
           />
           <div>
             <h1 className="text-2xl font-bold text-green-500 mb-6">
-              QurbaniHat – নির্ভরযোগ্য<br/> কোরবানির <br /> পশু বুকিং প্ল্যাটফর্ম ।
+              Qurbani made simple & trusted.
             </h1>
             <p>
-              QurbaniHat-এ সরাসরি খামার থেকে <br /> সেরা দামে স্বাস্থ্যসম্মত গরু
-              ও ছাগল
-              <br /> বুক করুন দ্রুত এবং নিরাপদে।
+              Browse healthy, ethically-raised cows and goats from verified
+              Bangladeshi farms. Transparent pricing. Doorstep delivery.
             </p>
+            <div className="flex">
+              <h1>500+ Animals</h1>
+              <h1>64 Districts</h1>
+              <h1>100% Verified</h1>
+            </div>
+            
           </div>
         </div>
       </div>
