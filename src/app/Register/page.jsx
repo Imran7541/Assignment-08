@@ -30,7 +30,7 @@ export default function RegisterPage() {
         email,
         password,
     })
-    console.log({data,error});
+    
     if(!error){
       router.push('/')
     }

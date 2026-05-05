@@ -9,7 +9,7 @@ const TopAnimals =async () => {
     return (
         <div>
             <h1 className="text-2xl font-bold mt-5"></h1>
-            <div className="grid grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
                 {topAnimals.map(photo=><AnimalCard key={photo.id} photo={photo}/>)}
             </div>
         </div>

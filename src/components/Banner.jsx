@@ -8,19 +8,30 @@ const Banner = () => {
             className="w-full lg:w-[700px] h-[400px] lg:h-[500px] object-cover rounded-lg shadow-2xl"
           />
           <div>
-            <h1 className="text-2xl font-bold text-green-500 mb-6">
-              Qurbani made simple & trusted.
+            <h1 className="text-5xl font-bold text-green-500 mb-6">
+              Qurbani made <br />{" "}
+               <span className="text-orange-400">simple</span> & trusted. 
             </h1>
-            <p>
+            <div className="mt-10">
+              <p>
               Browse healthy, ethically-raised cows and goats from verified
-              Bangladeshi farms. Transparent pricing. Doorstep delivery.
+               <br/> Bangladeshi farms. Transparent pricing. Doorstep delivery.
             </p>
-            <div className="flex">
-              <h1>500+ Animals</h1>
-              <h1>64 Districts</h1>
-              <h1>100% Verified</h1>
             </div>
-            
+            <div className="flex mt-10 gap-5">
+              <div className="flex flex-col items-center">
+                <h1 className="text-green-500 text-3xl font-bold">1000+</h1>
+                <p className="text-xl text-gray-600">Animals</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <h1 className="text-red-300 text-3xl font-bold">64</h1>
+                <p className="text-xl text-gray-600">Districts</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <h1 className="text-green-500 text-3xl font-bold">100%</h1>
+                <p className="text-xl text-gray-600">Verified</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

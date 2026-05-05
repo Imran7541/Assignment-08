@@ -5,10 +5,10 @@ import { FaWeight } from "react-icons/fa";
 
 const AnimalCard = ({ photo }) => {
   return (
-     <Link href={`/all-animals/${photo.id}`}>
-    <Card className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+     <Link  href={`/all-animals/${photo.id}`}>
+    <Card className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 ">
       
-      <div className="relative w-full h-56 bg-gray-100">
+      <div className=" relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
         <Image
           src={photo.image}
           fill

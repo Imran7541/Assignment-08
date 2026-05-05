@@ -7,13 +7,13 @@ const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData.data?.user;
 
-  const handleLogOut= async()=>{
-  await authClient.signOut()
-  }
+  const handleLogOut = async () => {
+    await authClient.signOut();
+  };
 
   return (
-    <div className="border-b px-2">
-      <nav className=" flex justify-between items-center  py-3 max-w-7xl mx-auto w-full">
+    <div className="border-b px-2 max-w-7xl mx-auto w-full ">
+      <nav className=" flex justify-between items-center  py-3 ">
         <div className="flex gap-2 items-center">
           <Image
             src={"/logo.png"}
@@ -29,8 +29,12 @@ const Navbar = () => {
           <li>
             <Link href={"/"}>Home</Link>
           </li>
+
           <li>
             <Link href={"/all-animals"}>All Animals</Link>
+          </li>
+          <li>
+            <Link href={"/profile"}>Profile</Link>
           </li>
         </ul>
 
@@ -38,10 +42,10 @@ const Navbar = () => {
           {!user && (
             <ul className="flex items-center text-sm gap-5">
               <li>
-                <Link href={"/Register"}>Register</Link>
+                <Link href={"/register"}>Register</Link>
               </li>
               <li>
-                <Link href={"/Login"}>Login</Link>
+                <Link href={"/login"}>Login</Link>
               </li>
             </ul>
           )}
@@ -53,10 +57,11 @@ const Navbar = () => {
                   src={user?.image}
                   referrerPolicy="no-referrer"
                 />
-                <Avatar.Fallback>{user?.name.charAt(2)}</Avatar.Fallback>
+                <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
               </Avatar>
-              <Button onClick={handleLogOut} size="sm" variant="danger">LogOut</Button>
-            
+              <Button onClick={handleLogOut} size="sm" variant="danger">
+                LogOut
+              </Button>
             </div>
           )}
         </div>
