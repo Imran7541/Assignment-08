@@ -25,10 +25,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-screen flex flex-col">
         <Navbar/>
-       <main className="max-w-7xl mx-auto px-4"> {children}</main>
-       <QurbaniTips/>
+       <main className="max-w-[85%] mx-auto px-4 "> {children}</main>
         <Footer/>
 
       </body>

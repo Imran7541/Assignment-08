@@ -1,6 +1,6 @@
+
+
 import AnimalCard from "./AnimalCard";
-
-
 const TopAnimals =async () => {
    const res=await fetch('https://assignment-08-ebon.vercel.app/data.json')
    const photos= await res.json();
@@ -8,7 +8,7 @@ const TopAnimals =async () => {
    console.log(topAnimals);
     return (
         <div>
-            <h1 className="text-2xl font-bold mt-5"></h1>
+            <h1 className="text-5xl font-bold my-5 text-center">Featured <span className="text-orange-500">Animals</span></h1>
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
                 {topAnimals.map(photo=><AnimalCard key={photo.id} photo={photo}/>)}
             </div>

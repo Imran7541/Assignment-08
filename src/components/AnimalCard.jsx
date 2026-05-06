@@ -1,39 +1,45 @@
-import { Card, Chip } from "@heroui/react";
-import Image from "next/image";
+import { Card } from "@heroui/react";
 import Link from "next/link";
-import { FaWeight } from "react-icons/fa";
+import Image from "next/image";
 
 const AnimalCard = ({ photo }) => {
   return (
-     <Link  href={`/all-animals/${photo.id}`}>
-    <Card className="rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 ">
-      
-      <div className=" relative w-full aspect-[4/3] bg-gray-100 overflow-hidden">
+    <Card className="border rounded-3xl p-3 shadow-sm bg-white flex flex-col h-full">
+      <div className="relative w-full aspect-[4/3] mb-2">
         <Image
-          src={photo.image}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width:1200px)50vw,33vw" 
+          src={photo.image}
           alt={photo.name}
-          className="object-cover hover:scale-105 transition duration-300"
+          className="rounded-2xl object-cover"
         />
-        <Chip size="sm" className="absolute top-2">{photo.category}</Chip>
       </div>
 
-      <div className="p-4 space-y-2">
-        <h2 className="text-lg font-semibold">{photo.name}</h2>
-        <p className="text-sm text-gray-500">Breed: {photo.breed}</p>
-        <div className="flex justify-between text-sm text-gray-600">
-          <div className="flex">
-            <span>
-              <FaWeight />
-              {photo.weight} Kg
-            </span>
-          </div>
-          <span className="font-semibold text-green-600">${photo.price}</span>
-        </div>
+      <div className="flex justify-between items-start gap-2 mb-2">
+        <h3 className="text-[1rem] font-semibold text-gray-800 leading-snug">
+          {photo.name}
+        </h3>
+        <span className="text-[10px] font-semibold px-3 py-1 rounded-full bg-[#00A859] text-white whitespace-nowrap">
+          {photo.breed}
+        </span>
+      </div>
+
+      <div className="flex justify-between text-gray-500 text-sm mb-2">
+        <p>{photo.location}</p>
+        <p className="font-medium text-gray-700">{photo.weight} Kg</p>
+      </div>
+
+      
+      <div className="flex justify-between items-center mt-auto">
+        <h2 className="text-lg font-bold text-[#00A859]">TK-{photo.price}</h2>
+
+        <Link
+          href={`/all-animals/${photo.id}`}
+          className="bg-[#00A859] hover:bg-green-700 transition-colors py-1.5 px-4 rounded-lg text-white text-sm font-medium"
+        >
+          Details
+        </Link>
       </div>
     </Card>
-    </Link>
   );
 };
 

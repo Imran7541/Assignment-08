@@ -16,11 +16,11 @@ const Navbar = () => {
       <nav className=" flex justify-between items-center  py-3 ">
         <div className="flex gap-2 items-center">
           <Image
-            src={"/logo.png"}
+            src={"/logo(9).png"}
             alt="logo"
             loading="eager"
-            width={40}
-            height={40}
+            width={60}
+            height={60}
             className="object-cover h-auto w-auto"
           />
         </div>
@@ -42,10 +42,25 @@ const Navbar = () => {
           {!user && (
             <ul className="flex items-center text-sm gap-5">
               <li>
-                <Link href={"/register"}>Register</Link>
+                <Link href={"/register"}>
+                  <Button
+                    size="sm"
+                    className="bg-green-600 text-white hover:bg-green-700"
+                  >
+                    Register
+                  </Button>
+                </Link>
               </li>
+
               <li>
-                <Link href={"/login"}>Login</Link>
+                <Link href={"/login"}>
+                  <Button
+                    size="sm"
+                    className="bg-orange-500 text-white hover:bg-orange-600"
+                  >
+                    Login
+                  </Button>
+                </Link>
               </li>
             </ul>
           )}
