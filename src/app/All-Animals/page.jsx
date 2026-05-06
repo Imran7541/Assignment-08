@@ -2,7 +2,7 @@ import AnimalCard from "@/components/AnimalCard";
 
 
 const AllAnimalsPage =async () => {
-    const res =await fetch('https://assignment-08-ebon.vercel.app/data.json')
+    const res =await fetch('https://assignment-08-f9oc.vercel.app/data.json')
    const photos= await res.json();
    
     return (
