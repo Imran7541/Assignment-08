@@ -2,7 +2,7 @@
 
 import AnimalCard from "./AnimalCard";
 const TopAnimals =async () => {
-   const res=await fetch('https://assignment-08-ebon.vercel.app/data.json')
+   const res=await fetch('https://assignment-08-f9oc.vercel.app/data.json')
    const photos= await res.json();
    const topAnimals= photos.slice(0,4)
    console.log(topAnimals);
