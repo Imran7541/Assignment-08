@@ -11,33 +11,43 @@ import {
   Label,
   TextField,
 } from "@heroui/react";
+import { useRouter } from "next/navigation";
 import { GrGoogle } from "react-icons/gr";
 
-export default function LoginPage() {
+export default function SignInPage() {
+  const router = useRouter();
+
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    const email = e.target.email.value;
-    const password = e.target.password.value;
+    // ✅ FIX: correct way to get values
+    const formData = new FormData(e.currentTarget);
+    const email = formData.get("email");
+    const password = formData.get("password");
 
     const { data, error } = await authClient.signIn.email({
       email,
       password,
       callbackURL: "/",
     });
-    console.log({ data, error });
+
+    if (!error) {
+      router.push("/");
+    }
   };
-  const handleGoogleSignIn= async()=>{
-   await authClient.signIn.social({
-    provider:'google'
-   })
-  }
+  const handleGoogleSignIn = async () =>{
+     await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    })
+  };
 
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
       <h1 className="text-center text-2xl font-bold">Login</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+        
         <TextField
           isRequired
           name="email"
@@ -46,12 +56,11 @@ export default function LoginPage() {
             if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)) {
               return "Please enter a valid email address";
             }
-
             return null;
           }}
         >
           <Label>Email</Label>
-          <Input placeholder="john@example.com" />
+          <Input name="email" placeholder="john@example.com" />
           <FieldError />
         </TextField>
 
@@ -70,27 +79,27 @@ export default function LoginPage() {
             if (!/[0-9]/.test(value)) {
               return "Password must contain at least one number";
             }
-
             return null;
           }}
         >
           <Label>Password</Label>
-          <Input placeholder="Enter your password" />
+          <Input name="password" type="password" placeholder="Enter your password" />
           <Description>
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>
           <FieldError />
         </TextField>
 
-        <div className="flex gap-2 items-center">
+        <div className="flex gap-2">
+          {/* FIX: submit button */}
           <Button type="submit">
             <Check />
             Login
           </Button>
         </div>
       </Form>
-      <p className="text-center font-bold text-2xl text-green-400">Or</p>
-      <Button onClick={handleGoogleSignIn} variant="outline" className={'w-full'}><GrGoogle/>Sign in With Google</Button>
+      <p className="text-center text-xl font-bold text-green-500">Or</p>
+            <Button onClick={handleGoogleSignIn} className={'w-full'}><GrGoogle/>Continue With Google</Button>
     </Card>
   );
 }

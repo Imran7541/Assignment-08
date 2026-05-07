@@ -69,7 +69,4 @@ NEXT_PUBLIC_FIREBASE_PROJECT_ID=
 
 ---
 
-## 👨‍💻 Developer
 
-Built for **Assignment Category: A8 – Pineapple**
-````

@@ -1,5 +1,3 @@
-
-
 "use client";
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
@@ -14,31 +12,40 @@ import {
   TextField,
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { GrGoogle } from "react-icons/gr";
 
-export default function RegisterPage() {
-  const router=useRouter()
+
+
+export default function SignUpPage() {
+  const router = useRouter();
+
   const onSubmit = async (e) => {
     e.preventDefault();
-    const name=e.target.name.value;
-    const photo=e.target.photo.value;
-    const email=e.target.email.value;
-    const password=e.target.password.value;
+    const name = e.target.name.value;
+    const image = e.target.image.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    const {data,error}= await authClient.signUp.email({
+      name,
+      image,
+      email,
+      password,
     
-    const {data,error}=await authClient.signUp.email({
-        name,
-        photo,
-        email,
-        password,
     })
-    
     if(!error){
-      router.push('/')
+      router.push("/")
     }
   };
+  const handleGoogleSignIn = async () =>{
+    await authClient.signIn.social({
+      provider: "google"
+    })
+  }
 
   return (
     <Card className="border mx-auto w-125 py-10 mt-5">
-      <h1 className="text-center text-2xl font-bold">Register</h1>
+      <h1 className="text-center text-2xl font-bold">Sign Up</h1>
 
       <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
         <TextField isRequired name="name" type="text">
@@ -47,9 +54,9 @@ export default function RegisterPage() {
           <FieldError />
         </TextField>
 
-        <TextField isRequired name="photo" type="text">
-          <Label>Photo Link</Label>
-          <Input placeholder="Photo Link" />
+        <TextField isRequired name="image" type="text">
+          <Label>Image URL</Label>
+          <Input placeholder="Image URL" />
           <FieldError />
         </TextField>
 
@@ -98,13 +105,15 @@ export default function RegisterPage() {
         </TextField>
 
         <div className="flex gap-2">
-          <Button type="Register">
+          <Button type="submit">
             <Check />
             Register
           </Button>
           
         </div>
       </Form>
+      <p className="text-center text-xl font-bold text-green-500">Or</p>
+      <Button onClick={handleGoogleSignIn} className={'w-full'}><GrGoogle/> Continue With Google</Button>
     </Card>
   );
 }
